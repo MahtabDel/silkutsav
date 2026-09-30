@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SilkUtsav - Bhagalpur silk sarees and handloom products">
+<title>SilkUtsav | Bhagalpur Silk Store</title>
+<style>
+:root{--m:#641f27;--g:#c9973e;--c:#fff8ef;--i:#34231e;--mut:#75635a;--b:#ead8c4}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Georgia,serif;color:var(--i);background:var(--c);line-height:1.55}
+header{position:sticky;top:0;z-index:20;background:#641f27;color:#fff;padding:14px 6%;display:flex;align-items:center;gap:25px}.logo{font-size:28px;font-weight:bold}.logo span{color:#f3ce79}
+nav{display:flex;gap:18px;margin-left:auto}nav a{color:#fff;text-decoration:none;font:14px Arial}.actions{display:flex;gap:8px}.icon{border:0;background:#7c3038;color:#fff;padding:9px 11px;border-radius:5px;cursor:pointer}.count{background:var(--g);color:#32160f;border-radius:99px;padding:1px 5px;font-size:11px}
+.hero{min-height:70vh;padding:85px 7%;display:flex;align-items:center;background:linear-gradient(120deg,#fff3dc,#f1d8ad)}.hero>div{max-width:680px}.ey{color:#986519;letter-spacing:3px;font:700 13px Arial}.hero h1{font-size:clamp(52px,9vw,92px);line-height:.95;color:var(--m);margin:12px 0}.hero p{font-size:20px;color:#58453c;max-width:590px}
+.btn{display:inline-block;background:var(--m);color:#fff;border:0;padding:13px 21px;border-radius:5px;text-decoration:none;font:700 14px Arial;cursor:pointer;margin-top:22px}.gold{background:var(--g);color:#32160f}
+section{padding:65px 6%}.head{text-align:center;max-width:720px;margin:0 auto 32px}.head h2{font-size:39px;color:var(--m)}.head p{color:var(--mut);font:15px Arial}
+.filters{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-bottom:25px}.filter{border:1px solid var(--b);background:#fff;color:var(--m);padding:8px 15px;border-radius:20px;cursor:pointer}.active{background:var(--m);color:#fff}
+.grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:19px}.product{background:#fff;border:1px solid var(--b);border-radius:8px;overflow:hidden;box-shadow:0 5px 18px #6d3d1a0d}.pic{height:285px;width:100%;object-fit:cover;display:block;background:#eee;cursor:pointer}.pic:hover{opacity:.95}.body{padding:17px}.body h3{color:var(--m);font-size:18px}.price{font:700 17px Arial;margin:7px 0}.small{color:var(--mut);font:13px Arial}.body button{width:100%;padding:10px;margin-top:10px;border:0;border-radius:4px;background:var(--m);color:#fff;cursor:pointer}
+.about{background:var(--m);color:#fff}.about .head h2{color:#f2cf7a}.about p{max-width:820px;margin:auto;text-align:center;font:16px Arial;color:#f8e9dc}.facts{display:flex;justify-content:center;gap:65px;text-align:center;margin-top:28px}.facts b{display:block;color:#f2cf7a;font-size:28px}
+footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px Arial}.wa{position:fixed;right:20px;bottom:20px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font:bold 20px Arial;z-index:30}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;align-items:center;justify-content:center;padding:20px}.show{display:flex}.box{background:#fff;border-radius:10px;padding:27px;max-width:520px;width:100%;max-height:85vh;overflow:auto}.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}.field{width:100%;padding:11px;margin:7px 0 13px;border:1px solid var(--b);border-radius:5px}.row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--b);font:14px Arial}.qty button{border:1px solid var(--b);background:#fff;padding:2px 8px}.total{text-align:right;font:bold 18px Arial;margin:17px 0}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}nav{order:3;width:100%;justify-content:center;margin:0}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.hero h1{font-size:58px}.facts{gap:20px}nav{gap:9px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Silk<span>Utsav</span></div>
+<nav><a href="#home">Home</a><a href="#sarees">Sarees</a><a href="#products">Products</a><a href="#about">Bhagalpur Silk</a></nav>
+<div class="actions"><button class="icon" onclick="login()">Login</button><button class="icon" onclick="cartOpen()">🛒 <span id="cc" class="count">0</span></button></div></header>
+
+<section class="hero" id="home"><div><h4>This website is underconstruction, for order, please contact 917065960490</h4>
+<div class="ey">FROM BHAGALPUR, BIHAR</div><h1>SilkUtsav</h1>
+<p>Celebrate the art of Bhagalpuri silk. Discover elegant sarees and handloom treasures woven with tradition.</p>
+<a class="btn" href="#sarees">Shop Sarees</a> <a class="btn gold" href="#about">Our Story</a></div></section>
+
+<section id="sarees"><div class="head"><h2>Bhagalpuri Sarees</h2><p>Explore our curated collection of silk and handloom sarees.</p></div>
+<div class="filters"><button class="filter active" onclick="filter('all',this)">All</button><button class="filter" onclick="filter('saree',this)">Sarees</button><button class="filter" onclick="filter('silk',this)">Silk</button><button class="filter" onclick="filter('handloom',this)">Handloom</button></div>
+<div class="grid" id="grid"></div></section>
+
+<section id="products"><div class="head"><h2>More Products</h2><p>SilkUtsav handloom treasures for everyday elegance and gifting.</p></div>
+<div class="grid" id="more"></div></section>
+
+<section class="about" id="about"><div class="head"><h2>The Story of Bhagalpur Silk</h2></div>
+<p>Bhagalpur has a long tradition of silk weaving and is widely known for its handloom textiles. SilkUtsav is a digital home for this heritage, connecting customers with beautiful products while celebrating the craft and people behind every weave.</p>
+<div class="facts"><div><b>01</b>Heritage</div><div><b>02</b>Handloom</div><div><b>03</b>Bhagalpur</div></div></section>
+<footer>© 2026 SilkUtsav · Bhagalpur, Bihar · Crafted for Indian handloom lovers</footer>
+<a class="wa" href="#" onclick="wa();return false">WA</a>
+
+<div class="modal" id="cm"><div class="box"><button class="close" onclick="closeM('cm')">×</button><h2>Your Cart</h2><div id="items"></div><div class="total" id="total">Total: ₹0</div><button class="btn" style="width:100%" onclick="order()">Order on WhatsApp</button></div></div>
+<div class="modal" id="lm"><div class="box"><button class="close" onclick="closeM('lm')">×</button><h2>SilkUtsav Login</h2><p class="small">Demo login UI — connect a backend for real accounts.</p><input class="field" id="email" placeholder="Email address"><input class="field" id="pass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="demoLogin()">Login</button></div></div>
+
+<script>
+const P=[
+{id:1,n:"Red & Gold Semi Silk Striped Saree",p:800,c:"silk festive",e:"images/saree-1.jpg"},
+{id:2,n:"Wine Purple Kota Stple Check Zari Border Saree",p:800,c:"handloom festive",e:"images/saree-2.jpg"},
+{id:3,n:"Purple Gold Border Semi Silk Saree",p:800,c:"silk handloom",e:"images/saree-3.jpg"},
+{id:4,n:"Aqua Embroidered Saree",p:800,c:"handloom festive",e:"images/saree-4.jpg"}
+];
+let C=JSON.parse(localStorage.getItem("silkutsavCart")||"{}");
+const money=n=>"₹"+n.toLocaleString("en-IN");
+function cards(list){return list.map(x=>`<div class="product"><img class="pic" src="${x.e}" alt="${x.n}" onclick="window.open(this.src,'_blank')"><div class="body"><h3>${x.n}</h3><p class="small">Bhagalpur-inspired SilkUtsav collection</p><div class="price">${money(x.p)}</div><button onclick="add(${x.id})">Add to Cart</button></div></div>`).join("")}
+function render(f="all"){let a=f==="all"?P:P.filter(x=>x.c.includes(f));document.getElementById("grid").innerHTML=cards(a)}
+function filter(f,b){document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(f)}
+function add(id){C[id]=(C[id]||0)+1;save();cartOpen()}
+function save(){localStorage.setItem("silkutsavCart",JSON.stringify(C));count()}
+function count(){document.getElementById("cc").textContent=Object.values(C).reduce((a,b)=>a+b,0)}
+function cartOpen(){document.getElementById("cm").classList.add("show");drawCart()}
+function drawCart(){let ids=Object.keys(C),out="",tot=0;if(!ids.length)out="<p>Your cart is empty.</p>";ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];tot+=x.p*q;out+=`<div class="row"><span>${x.n}<br><b>${money(x.p*q)}</b></span><span class="qty"><button onclick="qty(${x.id},-1)">−</button> ${q} <button onclick="qty(${x.id},1)">+</button></span></div>`});document.getElementById("items").innerHTML=out;document.getElementById("total").textContent="Total: "+money(tot)}
+function qty(id,n){C[id]=(C[id]||0)+n;if(C[id]<=0)delete C[id];save();drawCart()}
+function login(){document.getElementById("lm").classList.add("show")}
+function closeM(id){document.getElementById(id).classList.remove("show")}
+function demoLogin(){let e=document.getElementById("email").value;if(!e)return alert("Please enter your email.");alert("Demo login successful for "+e);closeM("lm")}
+function wa(){window.open("https://wa.me/919999999999?text="+encodeURIComponent("Namaste SilkUtsav! I would like to know more about your products."),"_blank")}
+function order(){let ids=Object.keys(C);if(!ids.length)return alert("Your cart is empty.");let s=["Namaste SilkUtsav! I want to order:",""],t=0;ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];t+=x.p*q;s.push(x.n+" x "+q+" = "+money(x.p*q))});s.push("","Total: "+money(t),"Please share payment and delivery details.");window.open("https://wa.me/919999999999?text="+encodeURIComponent(s.join("\n")),"_blank")}
+render();document.getElementById("more").innerHTML=cards([]);count();
+</script>
+</body></html>
