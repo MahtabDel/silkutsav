@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SilkUtsav - Discover the heritage of Bhagalpur silk. Authentic handloom, timeless elegance.">
+  <title>SilkUtsav | Bhagalpur Silk</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, "Times New Roman", serif; color: #3d2416; background: #fffaf4; line-height: 1.6; }
+    header { background: #5b1f1f; color: white; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+    .logo { font-size: 28px; font-weight: bold; letter-spacing: 1px; }
+    nav a { color: white; text-decoration: none; margin-left: 24px; font-family: Arial, sans-serif; font-size: 14px; }
+    .hero { min-height: 78vh; padding: 80px 7%; display: flex; align-items: center; background: linear-gradient(110deg, #fff4df 0%, #f7dca9 55%, #eed0bd 100%); }
+    .hero-content { max-width: 650px; }
+    .tag { text-transform: uppercase; letter-spacing: 3px; color: #9a5a18; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; }
+    h1 { font-size: clamp(52px, 9vw, 92px); line-height: .95; margin: 15px 0 20px; color: #5b1f1f; }
+    .hero p { font-size: 20px; max-width: 570px; margin-bottom: 30px; }
+    .btn { display: inline-block; background: #5b1f1f; color: white; padding: 14px 25px; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif; font-weight: bold; }
+    section { padding: 70px 7%; }
+    .section-title { text-align: center; font-size: 38px; color: #5b1f1f; margin-bottom: 12px; }
+    .section-subtitle { text-align: center; max-width: 650px; margin: 0 auto 40px; color: #765b4b; font-family: Arial, sans-serif; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: auto; }
+    .card { background: white; padding: 32px 25px; border: 1px solid #ead7c2; border-radius: 8px; text-align: center; box-shadow: 0 6px 20px rgba(80,40,20,.06); }
+    .card .icon { font-size: 42px; margin-bottom: 14px; }
+    .card h3 { color: #7b2c2c; margin-bottom: 10px; font-size: 23px; }
+    .card p { color: #6b574b; font-family: Arial, sans-serif; font-size: 14px; }
+    .about { background: #5b1f1f; color: white; text-align: center; }
+    .about .section-title { color: #f7dca9; }
+    .about p { max-width: 800px; margin: auto; font-family: Arial, sans-serif; }
+    .cta { text-align: center; background: #f3e3cf; }
+    footer { background: #2d1712; color: #e8d5c1; padding: 28px 7%; text-align: center; font-family: Arial, sans-serif; font-size: 13px; }
+    @media (max-width: 760px) {
+      header { flex-direction: column; gap: 12px; }
+      nav a { margin: 0 7px; }
+      .hero { min-height: 65vh; padding-top: 60px; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 55px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">SilkUtsav</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#story">Our Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="tag">The Heritage of Bhagalpur</div>
+      <h1>SilkUtsav</h1>
+      <p>Celebrating the timeless beauty of Bhagalpuri silk — woven with tradition, crafted with care, and made for generations.</p>
+      <a class="btn" href="#collections">Explore Collections</a>
+    </div>
+  </section>
+
+  <section id="collections">
+    <h2 class="section-title">Our Collections</h2>
+    <p class="section-subtitle">Discover the elegance of Indian handloom through the rich heritage of Bhagalpur.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🧵</div>
+        <h3>Bhagalpuri Silk</h3>
+        <p>Elegant handloom silk inspired by the weaving traditions of Bhagalpur.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>Festive Collection</h3>
+        <p>Beautiful silk creations for weddings, festivals and special celebrations.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌿</div>
+        <h3>Handloom Heritage</h3>
+        <p>Supporting the craft, stories and artistry behind India's traditional weavers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="story">
+    <h2 class="section-title">A Celebration of Silk</h2>
+    <p>
+      SilkUtsav brings together the spirit of Bhagalpur and the beauty of Indian silk.
+      Our vision is to connect customers with authentic handloom traditions while giving
+      artisans and their craftsmanship a wider digital home.
+    </p>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2 class="section-title">Bring Silk Home</h2>
+    <p class="section-subtitle">For collections, artisan partnerships or enquiries, contact SilkUtsav.</p>
+    <a class="btn" href="mailto:hello@silkutsav.in">Contact SilkUtsav</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 SilkUtsav · Bhagalpur, Bihar · Made with love for Indian handloom
+</footer>
+
+</body>
+</html>
