@@ -68,8 +68,8 @@ function qty(id,n){C[id]=(C[id]||0)+n;if(C[id]<=0)delete C[id];save();drawCart()
 function login(){document.getElementById("lm").classList.add("show")}
 function closeM(id){document.getElementById(id).classList.remove("show")}
 function demoLogin(){let e=document.getElementById("email").value;if(!e)return alert("Please enter your email.");alert("Demo login successful for "+e);closeM("lm")}
-function wa(){window.open("https://wa.me/919999999999?text="+encodeURIComponent("Namaste SilkUtsav! I would like to know more about your products."),"_blank")}
-function order(){let ids=Object.keys(C);if(!ids.length)return alert("Your cart is empty.");let s=["Namaste SilkUtsav! I want to order:",""],t=0;ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];t+=x.p*q;s.push(x.n+" x "+q+" = "+money(x.p*q))});s.push("","Total: "+money(t),"Please share payment and delivery details.");window.open("https://wa.me/919999999999?text="+encodeURIComponent(s.join("\n")),"_blank")}
+function wa(){window.open("https://wa.me/917065960490?text="+encodeURIComponent("Namaste SilkUtsav! I would like to know more about your products."),"_blank")}
+function order(){let ids=Object.keys(C);if(!ids.length)return alert("Your cart is empty.");let s=["Namaste SilkUtsav! I want to order:",""],t=0;ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];t+=x.p*q;s.push(x.n+" x "+q+" = "+money(x.p*q))});s.push("","Total: "+money(t),"Please share payment and delivery details.");window.open("https://wa.me/917065960490?text="+encodeURIComponent(s.join("\n")),"_blank")}
 render();document.getElementById("more").innerHTML=cards([]);count();
 </script>
 </body></html>
