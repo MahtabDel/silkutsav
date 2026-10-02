@@ -24,7 +24,7 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 <body>
 <header><div class="logo">Silk<span>Utsav</span></div>
 <nav><a href="#home">Home</a><a href="#sarees">Sarees</a><a href="#products">Products</a><a href="#about">Bhagalpur Silk</a></nav>
-<div class="actions"><button class="icon" onclick="login()">Login</button><button class="icon" onclick="cartOpen()">🛒 <span id="cc" class="count">0</span></button></div></header>
+<div class="actions"><button class="icon" onclick="login()">Login</button><button class="icon" onclick="cartOpen()">ðŸ›’ <span id="cc" class="count">0</span></button></div></header>
 <marquee direction="left" scrollamount="6" behavior="scroll"><h4 style="color: blue;">This website is under construction, for order, please contact 917065960490 or whatsapp on same number or Email us- silkutsavbhagalpur@gmail.com</h4></marquee>
 <section class="hero" id="home"><div>
 <div class="ey">FROM BHAGALPUR, BIHAR</div><h1>SilkUtsav</h1>
@@ -32,7 +32,7 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 <a class="btn" href="#sarees">Shop Sarees</a> <a class="btn gold" href="#about">Our Story</a></div></section>
 
 <section id="sarees"><div class="head"><h2>Bhagalpuri Sarees</h2><p>Explore our curated collection of silk and handloom sarees.</p></div>
-<div class="filters"><button class="filter active" onclick="filter('all',this)">All</button><button class="filter" onclick="filter('saree',this)">Sarees</button><button class="filter" onclick="filter('silk',this)">Silk</button><button class="filter" onclick="filter('handloom',this)">Handloom</button></div>
+<div class="filters"><button class="filter active" onclick="filter('all',this)">All</button><button class="filter" onclick="filter('saree',this)">Sarees</button><button class="filter" onclick="filter('suit',this)">Suits</button><button class="filter" onclick="filter('silk',this)">Silk</button><button class="filter" onclick="filter('handloom',this)">Handloom</button></div>
 <div class="grid" id="grid"></div></section>
 
 <section id="products"><div class="head"><h2>More Products</h2><p>SilkUtsav handloom treasures for everyday elegance and gifting.</p></div>
@@ -41,27 +41,27 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 <section class="about" id="about"><div class="head"><h2>The Story of Bhagalpur Silk</h2></div>
 <p>Bhagalpur has a long tradition of silk weaving and is widely known for its handloom textiles. SilkUtsav is a digital home for this heritage, connecting customers with beautiful products while celebrating the craft and people behind every weave.</p>
 <div class="facts"><div><b>01</b>Heritage</div><div><b>02</b>Handloom</div><div><b>03</b>Bhagalpur</div></div></section>
-<footer>© 2026 SilkUtsav · Bhagalpur, Bihar · Crafted for Indian handloom lovers</footer>
+<footer>Â© 2026 SilkUtsav Â· Bhagalpur, Bihar Â· Crafted for Indian handloom lovers</footer>
 <a class="wa" href="#" onclick="wa();return false">WA</a>
 
-<div class="modal" id="cm"><div class="box"><button class="close" onclick="closeM('cm')">×</button><h2>Your Cart</h2><div id="items"></div><div class="total" id="total">Total: ₹0</div><button class="btn" style="width:100%" onclick="order()">Order on WhatsApp</button></div></div>
-<div class="modal" id="lm"><div class="box"><button class="close" onclick="closeM('lm')">×</button><h2>SilkUtsav Login</h2><p class="small">Demo login UI — connect a backend for real accounts.</p><input class="field" id="email" placeholder="Email address"><input class="field" id="pass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="demoLogin()">Login</button></div></div>
+<div class="modal" id="cm"><div class="box"><button class="close" onclick="closeM('cm')">Ã—</button><h2>Your Cart</h2><div id="items"></div><div class="total" id="total">Total: â‚¹0</div><button class="btn" style="width:100%" onclick="order()">Order on WhatsApp</button></div></div>
+<div class="modal" id="lm"><div class="box"><button class="close" onclick="closeM('lm')">Ã—</button><h2>SilkUtsav Login</h2><p class="small">Demo login UI â€” connect a backend for real accounts.</p><input class="field" id="email" placeholder="Email address"><input class="field" id="pass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="demoLogin()">Login</button></div></div>
 
 <script>
 const P=[
-{id:1,n:"BH-SL001 Red & Gold Semi Silk Striped Saree",p:800,c:"silk festive saree",e:"images/saree/BH-SL001.jpg"},
-{id:2,n:"BH-SL002 Blue with Gold Striped Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL002.jpeg"},
-{id:3,n:"BH-SL003 Purple Gold Border Semi Silk Saree",p:800,c:"silk handloom saree",e:"images/saree/BH-SL003.jpg"},
-{id:4,n:"BH-SL004 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL004.jpeg"},
-{id:4,n:"BH-SL005 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL005.jpeg"},
-{id:4,n:"BH-SL006 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL006.jpeg"},
-{id:4,n:"BH-SL007 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL007.jpeg"},
-{id:4,n:"BH-SL008 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL008.jpeg"},
-{id:4,n:"BH-SL009 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL009.jpeg"},
-{id:4,n:"BH-SL010 Saree",p:800,c:"handloom festive saree",e:"images/saree/BH-SL010.jpeg"}
+{id:1,n:"BH-SL001 Premium Red & Gold Semi Silk Striped Saree",p:1199,c:"silk festive saree",e:"images/saree/BH-SL001.jpg"},
+{id:2,n:"BH-SL002 Premium Purple with Gold Woven Design Zari Border Saree",p:1199,c:"festive saree",e:"images/saree/BH-SL002.jpeg"},
+{id:3,n:"BH-SU001 Premium Purple Semi Silk Suit Woven Design p:1179,c:"silk handloom suit",e:"images/suit/BH-SU001.jpg"},
+{id:4,n:"BH-SU002 Premium Royal Blue Semi Silk Suit Woven Design",p:1199,c:"handloom festive suit",e:"images/suit/BH-SU002.jpeg"},
+{id:5,n:"BH-SU003 Premium Lavender Semi Silk Suit Woven Design",p:1159,c:"handloom festive suit",e:"images/suit/BH-SL003.jpeg"},
+{id:6,n:"BH-SU004 Premium Pink Semi Silk Suit Woven Design",p:1179,c:"handloom festive suit",e:"images/suit/BH-SL004.jpeg"},
+{id:7,n:"BH-SU005 Premium Yellow Semi Silk Suit Woven Design",p:1159,c:"handloom festive suit"e:"images/suit/BH-SL005.jpeg"},
+{id:8,n:"BH-SU006 Premium Olive Green Semi Silk Suit Woven Design",p:1199,c:"handloom festive suit",e:"images/suit/BH-SL006.jpeg"},
+{id:9,n:"BH-SU007 Premium Peach Semi Silk Suit Woven Design",p:1199,c:"handloom festive suit",e:"images/suit/BH-SL007.jpeg"},
+{id:10,n:"BH-SU008 Premium Turquoise Blue Semi Silk Suit Woven Design",p:1159,c:"handloom festive suit",e:"images/suit/BH-SL008.jpeg"}
 ];
 let C=JSON.parse(localStorage.getItem("silkutsavCart")||"{}");
-const money=n=>"₹"+n.toLocaleString("en-IN");
+const money=n=>"â‚¹"+n.toLocaleString("en-IN");
 function cards(list){return list.map(x=>`<div class="product"><img class="pic" src="${x.e}" alt="${x.n}" onclick="window.open(this.src,'_blank')"><div class="body"><h3>${x.n}</h3><p class="small">Bhagalpur-inspired SilkUtsav collection</p><div class="price">${money(x.p)}</div><button onclick="add(${x.id})">Add to Cart</button></div></div>`).join("")}
 function render(f="all"){let a=f==="all"?P:P.filter(x=>x.c.includes(f));document.getElementById("grid").innerHTML=cards(a)}
 function filter(f,b){document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(f)}
@@ -69,7 +69,7 @@ function add(id){C[id]=(C[id]||0)+1;save();cartOpen()}
 function save(){localStorage.setItem("silkutsavCart",JSON.stringify(C));count()}
 function count(){document.getElementById("cc").textContent=Object.values(C).reduce((a,b)=>a+b,0)}
 function cartOpen(){document.getElementById("cm").classList.add("show");drawCart()}
-function drawCart(){let ids=Object.keys(C),out="",tot=0;if(!ids.length)out="<p>Your cart is empty.</p>";ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];tot+=x.p*q;out+=`<div class="row"><span>${x.n}<br><b>${money(x.p*q)}</b></span><span class="qty"><button onclick="qty(${x.id},-1)">−</button> ${q} <button onclick="qty(${x.id},1)">+</button></span></div>`});document.getElementById("items").innerHTML=out;document.getElementById("total").textContent="Total: "+money(tot)}
+function drawCart(){let ids=Object.keys(C),out="",tot=0;if(!ids.length)out="<p>Your cart is empty.</p>";ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];tot+=x.p*q;out+=`<div class="row"><span>${x.n}<br><b>${money(x.p*q)}</b></span><span class="qty"><button onclick="qty(${x.id},-1)">âˆ’</button> ${q} <button onclick="qty(${x.id},1)">+</button></span></div>`});document.getElementById("items").innerHTML=out;document.getElementById("total").textContent="Total: "+money(tot)}
 function qty(id,n){C[id]=(C[id]||0)+n;if(C[id]<=0)delete C[id];save();drawCart()}
 function login(){document.getElementById("lm").classList.add("show")}
 function closeM(id){document.getElementById(id).classList.remove("show")}
