@@ -68,6 +68,9 @@ Steps to order:<br>
 <div class="modal" id="cm"><div class="box"><button class="close" onclick="closeM('cm')">×</button><h2>Your Cart</h2><div id="items"></div><div class="total" id="total">Total: ₹0</div><button class="btn" style="width:100%" onclick="order()">Order on WhatsApp</button></div></div>
 <div class="modal" id="lm"><div class="box"><button class="close" onclick="closeM('lm')">×</button><h2>SilkUtsav Login</h2><p class="small">Demo login UI — connect a backend for real accounts.</p><input class="field" id="email" placeholder="Email address"><input class="field" id="pass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="demoLogin()">Login</button></div></div>
 <script>
+ document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
 const P=[
 {id:1,n:"BH-SL001 Premium Red & Gold Semi Silk Striped Saree",p:1199,c:"festive saree",e:"images/saree/BH-SL001.jpg"},
 {id:2,n:"BH-SL002 Premium Purple with Gold Woven Design Zari Border Saree",p:1199,c:"festive saree",e:"images/saree/BH-SL002.jpeg"},
