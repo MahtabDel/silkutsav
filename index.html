@@ -283,13 +283,45 @@ function add(id){C[id]=(C[id]||0)+1;save();cartOpen()}
 function save(){localStorage.setItem("silkutsavCart",JSON.stringify(C));count()}
 function count(){document.getElementById("cc").textContent=Object.values(C).reduce((a,b)=>a+b,0)}
 function cartOpen(){document.getElementById("cm").classList.add("show");drawCart()}
-function drawCart(){let ids=Object.keys(C),out="",tot=0;if(!ids.length)out="<p>Your cart is empty.</p>";ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];tot+=x.p*q;out+=`<div class="row"><span>${x.n}<br><b>${money(x.p*q)}</b></span><span class="qty"><button onclick="qty(${x.id},-1)">−</button> ${q} <button onclick="qty(${x.id},1)">+</button></span></div>`});document.getElementById("items").innerHTML=out;document.getElementById("total").textContent="Total: "+money(tot)}
+function drawCart(){
+  let ids=Object.keys(C),out="",tot=0;
+  if(!ids.length) out="<p>Your cart is empty.</p>";
+  ids.forEach(id=>{
+    let x=P.find(a=>a.id==id);
+    if(!x) return;
+    let q=C[id];
+    tot+=x.p*q;
+    out+=`<div class="row"><span>${x.n}<br><b>${money(x.p*q)}</b></span><span class="qty"><button onclick="qty(${x.id},-1)">−</button> ${q} <button onclick="qty(${x.id},1)">+</button></span></div>`;
+  });
+  const discount=tot*0.10;
+  const grandTotal=tot-discount;
+  document.getElementById("items").innerHTML=out;
+  document.getElementById("total").innerHTML=
+    `Items Total: ${money(tot)}<br>`+
+    `<span style="color:#16803c">10% Discount: -${money(discount)}</span><br>`+
+    `<strong>Final Total: ${money(grandTotal)}</strong>`;
+}
 function qty(id,n){C[id]=(C[id]||0)+n;if(C[id]<=0)delete C[id];save();drawCart()}
 function login(){document.getElementById("lm").classList.add("show")}
 function closeM(id){document.getElementById(id).classList.remove("show")}
 function demoLogin(){let e=document.getElementById("email").value;if(!e)return alert("Please enter your email.");alert("Demo login successful for "+e);closeM("lm")}
 function wa(){window.open("https://wa.me/917065960490?text="+encodeURIComponent("Namaste SilkUtsav! I would like to know more about your products."),"_blank")}
-function order(){let ids=Object.keys(C);if(!ids.length)return alert("Your cart is empty.");let s=["Namaste SilkUtsav! I want to order:",""],t=0;ids.forEach(id=>{let x=P.find(a=>a.id==id),q=C[id];t+=x.p*q;s.push(x.n+" x "+q+" = "+money(x.p*q))});s.push("","Total: "+money(t),"Please share payment and delivery details.");window.open("https://wa.me/917065960490?text="+encodeURIComponent(s.join("\n")),"_blank")}
+function order(){
+  let ids=Object.keys(C);
+  if(!ids.length) return alert("Your cart is empty.");
+  let s=["Namaste SilkUtsav! I want to order:",""],t=0;
+  ids.forEach(id=>{
+    let x=P.find(a=>a.id==id);
+    if(!x) return;
+    let q=C[id];
+    t+=x.p*q;
+    s.push(x.n+" x "+q+" = "+money(x.p*q));
+  });
+  const discount=t*0.10;
+  const grandTotal=t-discount;
+  s.push("","Items Total: "+money(t),"10% Discount: -"+money(discount),"Final Total: "+money(grandTotal),"Please share payment and delivery details.");
+  window.open("https://wa.me/917065960490?text="+encodeURIComponent(s.join("\n")),"_blank");
+}
 render();renderMore();count();
 </script>
 </body></html>
