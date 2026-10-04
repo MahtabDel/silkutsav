@@ -31,7 +31,7 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 <body>
 <header><div class="logo">Silk<span>Utsav</span></div>
 <nav><a href="#home">Home</a><a href="#sarees">Sarees</a><a href="#products">Products</a><a href="#about">Bhagalpur Silk</a></nav>
-<div class="actions"><button class="icon" onclick="login()">Login</button><button class="icon" onclick="cartOpen()">🛒 <span id="cc" class="count">0</span></button></div></header>
+<div class="actions"><!--<button class="icon" onclick="login()">Login</button>--><button class="icon" onclick="cartOpen()">🛒 <span id="cc" class="count">0</span></button></div></header>
 <marquee direction="left" scrollamount="6" behavior="scroll"><h4 style="color: blue;">For order, please contact 917065960490 or whatsapp on same number or Email us- silkutsavbhagalpur@gmail.com</h4></marquee>
 <section class="hero" id="home"><div>
 <div class="ey">Welcome to SilkUtsav store</div>
@@ -42,7 +42,7 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 <div><p class="color-blink">🔥 Hurry Up! 🔥</p></div>
 <div><p class="color-blink">🔥 Fesitve special offer, Get 10% discount on MRP for each items! 🔥</p></div>
 <section id="sarees"><div class="head"><h2>Bhagalpuri Sarees and Suites</h2><p>Explore our curated collection of silk and handloom sarees.</p></div>
-<div class="filters"><button class="filter active" onclick="filter('all',this)">All</button><button class="filter" onclick="filter('saree',this)">Sarees</button><button class="filter" onclick="filter('suit',this)">Suits</button><button class="filter" onclick="filter('silk',this)">Pure Silk</button><button class="filter" onclick="filter('handloom',this)">Handloom</button></div>
+<div class="filters"><button class="filter active" onclick="filter('all',this)">All</button><button class="filter" onclick="filter('saree',this)">Sarees</button><button class="filter" onclick="filter('suit',this)">Suits</button><button class="filter" onclick="filter('puresaree',this)">Pure Silk Saree</button><button class="filter" onclick="filter('handloom',this)">Handloom</button></div>
 <div class="grid" id="grid"></div><div class="pagination" id="pagination" aria-label="Product pagination"></div></section>
 
 <section id="products"><div class="head"><h2>More Products</h2><p>SilkUtsav handloom treasures for everyday elegance and gifting.</p></div>
@@ -210,7 +210,44 @@ const P=[
 {id:139,n:"BH-SU062 Premium Khadi Cotton Semi Raw Silk Madhubani Print Unstitched Salwar Suit Dress Material",p:1250,c:"festive suit",e:"images/suit/BH-SU062.jpeg"},
 {id:140,n:"BH-SU063 Premium Khadi Cotton Semi Raw Silk Madhubani Print Unstitched Salwar Suit Dress Material",p:1250,c:"festive suit",e:"images/suit/BH-SU063.jpeg"},
 {id:141,n:"BH-SU064 Premium Khadi Cotton Semi Raw Silk Madhubani Print Unstitched Salwar Suit Dress Material",p:1250,c:"festive suit",e:"images/suit/BH-SU064.jpeg"},
-{id:142,n:"BH-SU065 Premium Khadi Cotton Semi Raw Silk Madhubani Print Unstitched Salwar Suit Dress Material",p:1250,c:"festive suit",e:"images/suit/BH-SU065.jpeg"}
+{id:142,n:"BH-SU065 Premium Khadi Cotton Semi Raw Silk Madhubani Print Unstitched Salwar Suit Dress Material",p:1250,c:"festive suit",e:"images/suit/BH-SU065.jpeg"},
+{id:143,n:"BH-PSL001 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL001.jpeg"},
+{id:144,n:"BH-PSL002 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL002.jpeg"},
+{id:145,n:"BH-PSL003 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL003.jpeg"},
+{id:146,n:"BH-PSL004 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL004.jpeg"},
+{id:147,n:"BH-PSL005 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL005.jpeg"},
+{id:148,n:"BH-PSL006 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL006.jpeg"},
+{id:149,n:"BH-PSL007 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL007.jpeg"},
+{id:150,n:"BH-PSL008 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL008.jpeg"},
+{id:151,n:"BH-PSL009 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL009.jpeg"},
+{id:152,n:"BH-PSL010 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL010.jpeg"},
+{id:153,n:"BH-PSL011 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL011.jpeg"},
+{id:154,n:"BH-PSL012 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL012.jpeg"},
+{id:155,n:"BH-PSL013 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL013.jpeg"},
+{id:156,n:"BH-PSL014 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL014.jpeg"},
+{id:157,n:"BH-PSL015 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL015.jpeg"},
+{id:158,n:"BH-PSL016 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL016.jpeg"},
+{id:159,n:"BH-PSL017 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL017.jpeg"},
+{id:160,n:"BH-PSL018 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL018.jpeg"},
+{id:161,n:"BH-PSL019 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL019.jpeg"},
+{id:162,n:"BH-PSL020 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL020.jpeg"},
+{id:163,n:"BH-PSL021 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL021.jpeg"},
+{id:164,n:"BH-PSL022 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL022.jpeg"},
+{id:165,n:"BH-PSL023 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL023.jpeg"},
+{id:166,n:"BH-PSL024 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL024.jpeg"},
+{id:167,n:"BH-PSL025 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL025.jpeg"},
+{id:168,n:"BH-PSL026 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL026.jpeg"},
+{id:169,n:"BH-PSL027 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL027.jpeg"},
+{id:170,n:"BH-PSL028 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL028.jpeg"},
+{id:171,n:"BH-PSL029 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL029.jpeg"},
+{id:172,n:"BH-PSL030 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL030.jpeg"},
+{id:173,n:"BH-PSL031 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL031.jpeg"},
+{id:174,n:"BH-PSL032 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL032.jpeg"},
+{id:175,n:"BH-PSL033 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL033.jpeg"},
+{id:176,n:"BH-PSL034 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL034.jpeg"},
+{id:177,n:"BH-PSL035 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL035.jpeg"},
+{id:178,n:"BH-PSL036 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL036.jpeg"},
+{id:179,n:"BH-PSL037 Premium Raw Silk Tussar Saree With Certified Silk Mark",p:3500,c:"festive puresaree",e:"images/puresilksaree/BH-PSL037.jpeg"}
 ];
 let C=JSON.parse(localStorage.getItem("silkutsavCart")||"{}");
 const money=n=>"₹"+n.toLocaleString("en-IN");
