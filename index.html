@@ -20,6 +20,12 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 .modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;align-items:center;justify-content:center;padding:20px}.show{display:flex}.box{background:#fff;border-radius:10px;padding:27px;max-width:520px;width:100%;max-height:85vh;overflow:auto}.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}.field{width:100%;padding:11px;margin:7px 0 13px;border:1px solid var(--b);border-radius:5px}.row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--b);font:14px Arial}.qty button{border:1px solid var(--b);background:#fff;padding:2px 8px}.total{text-align:right;font:bold 18px Arial;margin:17px 0}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}nav{order:3;width:100%;justify-content:center;margin:0}}
 @media(max-width:560px){.grid{grid-template-columns:1fr}.hero h1{font-size:58px}.facts{gap:20px}nav{gap:9px}}
+.color-blink {font-weight: bold; animation: changeColor 1s infinite; font-size: 1rem; text-align: center;}
+@keyframes changeColor {
+    0% { color: #0047AB; }   /* Starts as Blue */
+    50% { color: #FFA500; }  /* Switches to Orange at the halfway point */
+    100% { color: #0047AB; } /* Loops back to Blue */
+  }
 </style>
 </head>
 <body>
@@ -41,7 +47,8 @@ Once all the items are finalized, now click the Order on WhatsApp button. <br>
 All the selected items are sent to our WhatsApp number. Our WhatsApp team will contact you for further payment and delivery process.<br>
 </div>
 </section>
-
+<div><p class="color-blink">🔥 Hurry Up! 🔥</p></div>
+<div><p class="color-blink">🔥 Fesitve special offer, Get 10% discount on MRP for each items! 🔥</p></div>
 <section id="sarees"><div class="head"><h2>Bhagalpuri Sarees and Suites</h2><p>Explore our curated collection of silk and handloom sarees.</p></div>
 <div class="filters"><button class="filter active" onclick="filter('all',this)">All</button><button class="filter" onclick="filter('saree',this)">Sarees</button><button class="filter" onclick="filter('suit',this)">Suits</button><button class="filter" onclick="filter('silk',this)">Silk</button><button class="filter" onclick="filter('handloom',this)">Handloom</button></div>
 <div class="grid" id="grid"></div><div class="pagination" id="pagination" aria-label="Product pagination"></div></section>
@@ -61,7 +68,7 @@ All the selected items are sent to our WhatsApp number. Our WhatsApp team will c
 <script>
 const P=[
 {id:1,n:"BH-SL001 Premium Red & Gold Semi Silk Striped Saree",p:1199,c:"silk festive saree",e:"images/saree/BH-SL001.jpg"},
-{id:2,n:"BH-SL002 Premium Purple with Gold Woven Design Zari Border Saree",p:1199,c:"festive saree",e:"images/saree/BH-SL002.jpeg"},
+{id:2,n:"BH-SL002 Premium Purple with Gold Woven Design Zari Border Saree",p:1199,c:"festive saree",e:"images/saree/BH-SL002.jpg"},
 {id:3,n:"BH-SU001 Premium Purple Semi Silk Suit Woven Design",p:1179,c:"silk handloom suit",e:"images/suit/BH-SU001.jpeg"},
 {id:4,n:"BH-SU002 Premium Royal Blue Semi Silk Suit Woven Design",p:1199,c:"handloom festive suit",e:"images/suit/BH-SU002.jpeg"},
 {id:5,n:"BH-SU003 Premium Lavender Semi Silk Suit Woven Design",p:1159,c:"handloom festive suit",e:"images/suit/BH-SU003.jpeg"},
@@ -145,7 +152,53 @@ const P=[
 {id:83,n:"BH-SL074 Premium Semi Silk Saree Woven Design",p:1199,c:"festive saree",e:"images/saree/BH-SL074.jpeg"},
 {id:84,n:"BH-SL075 Premium Semi Silk Saree Woven Design",p:1199,c:"festive saree",e:"images/saree/BH-SL075.jpeg"},
 {id:85,n:"BH-SL076 Premium Semi Silk Saree Woven Design",p:1199,c:"festive saree",e:"images/saree/BH-SL076.jpeg"},
-{id:86,n:"BH-SL077 Premium Semi Silk Saree Woven Design",p:1199,c:"festive saree",e:"images/saree/BH-SL077.jpeg"}
+{id:86,n:"BH-SL077 Premium Semi Silk Saree Woven Design",p:1199,c:"festive saree",e:"images/saree/BH-SL077.jpeg"},
+{id:87,n:"BH-SU010 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU010.jpeg"},
+{id:88,n:"BH-SU011 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU011.jpeg"},
+{id:89,n:"BH-SU012 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU012.jpeg"},
+{id:90,n:"BH-SU013 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU013.jpeg"},
+{id:91,n:"BH-SU014 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU014.jpeg"},
+{id:92,n:"BH-SU015 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU015.jpeg"},
+{id:93,n:"BH-SU016 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU016.jpeg"},
+{id:94,n:"BH-SU017 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU017.jpeg"},
+{id:95,n:"BH-SU018 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU018.jpeg"},
+{id:96,n:"BH-SU019 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU019.jpeg"},
+{id:97,n:"BH-SU020 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU020.jpeg"},
+{id:98,n:"BH-SU021 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU021.jpeg"},
+{id:99,n:"BH-SU022 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU022.jpeg"},
+{id:100,n:"BH-SU023 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU023.jpeg"},
+{id:101,n:"BH-SU024 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU024.jpeg"},
+{id:102,n:"BH-SU025 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU025.jpeg"},
+{id:103,n:"BH-SU026 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU026.jpeg"},
+{id:104,n:"BH-SU027 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU027.jpeg"},
+{id:105,n:"BH-SU028 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU028.jpeg"},
+{id:106,n:"BH-SU029 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU029.jpeg"},
+{id:107,n:"BH-SU030 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU030.jpeg"},
+{id:108,n:"BH-SU031 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU031.jpeg"},
+{id:109,n:"BH-SU032 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU032.jpeg"},
+{id:110,n:"BH-SU033 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU033.jpeg"},
+{id:111,n:"BH-SU034 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU034.jpeg"},
+{id:112,n:"BH-SU035 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU035.jpeg"},
+{id:113,n:"BH-SU036 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU036.jpeg"},
+{id:114,n:"BH-SU037 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU037.jpeg"},
+{id:115,n:"BH-SU038 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU038.jpeg"},
+{id:116,n:"BH-SU039 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU039.jpeg"},
+{id:117,n:"BH-SU040 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU040.jpeg"},
+{id:118,n:"BH-SU041 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU041.jpeg"},
+{id:119,n:"BH-SU042 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU042.jpeg"},
+{id:120,n:"BH-SU043 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU043.jpeg"},
+{id:121,n:"BH-SU044 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU044.jpeg"},
+{id:122,n:"BH-SU045 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU045.jpeg"},
+{id:123,n:"BH-SU046 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU046.jpeg"},
+{id:124,n:"BH-SU047 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU047.jpeg"},
+{id:125,n:"BH-SU048 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU048.jpeg"},
+{id:126,n:"BH-SU049 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU049.jpeg"},
+{id:127,n:"BH-SU050 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU050.jpeg"},
+{id:128,n:"BH-SU051 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU051.jpeg"},
+{id:129,n:"BH-SU052 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU052.jpeg"},
+{id:130,n:"BH-SU053 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU053.jpeg"},
+{id:131,n:"BH-SU054 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU054.jpeg"},
+{id:132,n:"BH-SU055 Premium Pink Semi Silk Suit Woven Design",p:1159,c:"festive suit",e:"images/suit/BH-SU055.jpeg"}
 ];
 let C=JSON.parse(localStorage.getItem("silkutsavCart")||"{}");
 const money=n=>"₹"+n.toLocaleString("en-IN");
