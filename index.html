@@ -299,7 +299,7 @@ function drawCart(){
   document.getElementById("total").innerHTML=
     `Items Total: ${money(tot)}<br>`+
     `<span style="color:#16803c">10% Discount: -${money(discount)}</span><br>`+
-    `<strong>Final Total: ${money(grandTotal)}</strong>`;
+    `<strong>Final Total: ${money(Math.round(grandTotal))}</strong>`;
 }
 function qty(id,n){C[id]=(C[id]||0)+n;if(C[id]<=0)delete C[id];save();drawCart()}
 function login(){document.getElementById("lm").classList.add("show")}
@@ -319,7 +319,7 @@ function order(){
   });
   const discount=t*0.10;
   const grandTotal=t-discount;
-  s.push("","Items Total: "+money(t),"10% Discount: -"+money(discount),"Final Total: "+money(grandTotal),"Please share payment and delivery details.");
+  s.push("","Items Total: "+money(t),"10% Discount: -"+money(discount),"Final Total: "+money(Math.round(grandTotal)),"Please share payment and delivery details.");
   window.open("https://wa.me/917065960490?text="+encodeURIComponent(s.join("\n")),"_blank");
 }
 render();renderMore();count();
