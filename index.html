@@ -17,7 +17,7 @@ header{position:sticky;top:0;z-index:20;background:#641f27;color:#fff;padding:10
 nav{display:flex;gap:18px;margin-left:auto}nav a{color:#fff;text-decoration:none;font:14px Arial}.actions{display:flex;gap:8px}.icon{border:0;background:#7c3038;color:#fff;padding:9px 11px;border-radius:5px;cursor:pointer}.count{background:var(--g);color:#32160f;border-radius:99px;padding:1px 5px;font-size:11px}
 .hero{min-height:70vh;padding:70px 7%;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);align-items:center;gap:48px;background:linear-gradient(120deg,#fff3dc,#f1d8ad)}.hero-copy{max-width:680px}.hero-media{width:100%;max-width:560px;justify-self:end}.ey{color:#986519;letter-spacing:3px;font:700 13px Arial}.hero h1{font-size:clamp(52px,9vw,92px);line-height:.95;color:var(--m);margin:12px 0}.hero p{font-size:20px;color:#58453c;max-width:590px}
 .btn{display:inline-block;background:var(--m);color:#fff;border:0;padding:13px 21px;border-radius:5px;text-decoration:none;font:700 14px Arial;cursor:pointer;margin-top:22px}.gold{background:var(--g);color:#32160f}
-section{padding:65px 6%}.head{text-align:center;max-width:720px;margin:0 auto 32px}.head h2{font-size:39px;color:var(--m)}.head p{color:var(--mut);font:15px Arial}
+section{padding:65px 6%}.head{text-align:center;max-width:720px;margin:0 auto 12px}.head h2{font-size:39px;color:var(--m)}.head p{color:var(--mut);font:15px Arial}
 .filters{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-bottom:25px}.filter{border:1px solid var(--b);background:#fff;color:var(--m);padding:8px 15px;border-radius:20px;cursor:pointer}.active{background:var(--m);color:#fff}
 .grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
 .pagination{max-width:1120px;margin:28px auto 0;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;font:14px Arial;color:var(--mut)}.pagination button{border:1px solid var(--b);background:#fff;color:var(--m);padding:9px 13px;border-radius:5px;cursor:pointer}.pagination button.active{background:var(--m);color:#fff;border-color:var(--m)}.pagination button:disabled{opacity:.45;cursor:not-allowed}.page-info{width:100%;text-align:center;margin-top:4px;font-size:13px}.product{background:#fff;border:1px solid var(--b);border-radius:8px;overflow:hidden;box-shadow:0 5px 18px #6d3d1a0d}.pic{height:285px;width:100%;object-fit:cover;display:block;background:#eee;cursor:pointer}.pic:hover{opacity:.95}.body{padding:17px}.body h3{color:var(--m);font-size:18px}.price{font:700 17px Arial;margin:7px 0}.small{color:var(--mut);font:13px Arial}.body button{width:100%;padding:10px;margin-top:10px;border:0;border-radius:4px;background:var(--m);color:#fff;cursor:pointer}
@@ -30,6 +30,7 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.grid{grid-template-columns:1fr}.hero h1{font-size:58px}.facts{gap:20px}nav{gap:9px}}
 .color-blink {font-weight: bold; animation: changeColor 1s infinite; font-size: 1rem; text-align: center;}
+.location-map{width:100%;height:150px;border:0;border-radius:10px;box-shadow:0 8px 24px #641f2720}
 @keyframes changeColor {
     0% { color: #0047AB; }   /* Starts as Blue */
     50% { color: #FFA500; }  /* Switches to Orange at the halfway point */
@@ -49,6 +50,10 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
     <h1>SilkUtsav</h1>
     <p>Celebrate the art of Bhagalpuri silk. Discover elegant sarees and handloom treasures woven with tradition.</p>
     <a class="btn" href="#sarees">Shop Sarees/Suits</a> <a class="btn gold" href="#about">Our Story</a>
+    <div class="head"><h4>Find Us on Google Maps</h4><p>Search for SilkUtsav by Bhagalpur directly on Google Maps.</p></div>
+    <div>
+      <iframe class="location-map" title="Google Maps search for SilkUtsav Bhagalpur" src="https://www.google.com/maps?q=SilkUtsav%20Bhagalpur&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
   </div>
   <div class="hero-media">
     <h2 class="production-video-heading">Manufactur/Production videos</h2>
