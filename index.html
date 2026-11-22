@@ -36,6 +36,10 @@ footer{background:#291514;color:#e7d4c5;text-align:center;padding:28px;font:13px
     50% { color: #FFA500; }  /* Switches to Orange at the halfway point */
     100% { color: #0047AB; } /* Loops back to Blue */
   }
+
+.policy-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:14px}
+.policy-links a{color:#f3ce79;text-decoration:none;font:13px Arial,sans-serif}
+.policy-links a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -94,7 +98,14 @@ Steps to order:<br>
 <section class="about" id="about"><div class="head"><h2>The Story of Bhagalpur Silk</h2></div>
 <p>Bhagalpur has a long tradition of silk weaving and is widely known for its handloom textiles. SilkUtsav is a digital home for this heritage, connecting customers with beautiful products while celebrating the craft and people behind every weave.</p>
 <!--<div class="facts"><div><b>01</b>Heritage</div><div><b>02</b>Handloom</div><div><b>03</b>Bhagalpur</div></div>--></section>
-<footer>© 2026 SilkUtsav · Bhagalpur, Bihar · Crafted for Indian handloom lovers</footer>
+<footer>© 2026 SilkUtsav · Bhagalpur, Bihar · Crafted for Indian handloom lovers
+<div class="policy-links">
+  <a href="return-exchange-policy.html">Return &amp; Exchange Policy</a>
+  <a href="refund-policy.html">Refund Policy</a>
+  <a href="shipping-policy.html">Shipping &amp; Delivery Policy</a>
+</div>
+<div style="margin-top:10px">Customer support: <a href="mailto:silkutsavbhagalpur@gmail.com" style="color:#f3ce79">silkutsavbhagalpur@gmail.com</a> · <a href="https://wa.me/917065960490" style="color:#f3ce79">WhatsApp: +91 70659 60490</a></div>
+</footer>
 <a class="wa" href="#" onclick="wa();return false">WA</a>
 
 <div class="modal" id="cm"><div class="box"><button class="close" onclick="closeM('cm')">×</button><h2>Your Cart</h2><div id="items"></div><div class="total" id="total">Total: ₹0</div><button class="btn" style="width:100%" onclick="order()">Order on WhatsApp</button></div></div>
